@@ -1,0 +1,176 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Paleta reorganizada com a nova vibe */
+:root {
+  --cor-primaria: #1A1B1F;       /* Jet Black – fundo principal */
+  --cor-secundaria: #f0d9b9;     /* Mist White – texto principal */
+  --cor-terciaria: #FF4E4E;      /* Red Neon – botões, detalhes chamativos */
+  --cor-quaternaria: #121316af;    /* Charcoal – header/footer */
+  --cor-quinta: #521414;         /* Deep Blood – fundo da seção/banner */
+  --cor-sexta: #2A2B30;          /* Slate Dark – bordas, separadores */
+  --cor-setima: #FF6B6B;         /* Coral Glow – hover/destaques */
+  --cor-oitava: #F78CA2;         /* Soft Rose – títulos/subtítulos */
+  --cor-nona: #212226;           /* Graphite – fundo alternativo */
+  --cor-decima: #FF4E4E;         /* Red Neon – sombras/sutilezas */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding-top: 80px; /* Espaço para o header fixo */
+    background-image: repeating-linear-gradient(
+        45deg,
+        #0d0d0d,
+        #0d0d0d 10px,
+        #121212 10px,
+        #121212 20px
+    );
+}
+
+/* Header fixo, centralizado e dark */
+header {
+    background-color: var(--cor-quaternaria);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    padding: 1rem;
+    display: flex;
+    justify-content: start;
+    border-bottom: 2px solid var(--cor-terciaria);
+    backdrop-filter: blur(20px);
+}
+
+/* Navegação */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 2vh;
+}
+main{
+    padding: 10dvh;
+}
+nav a:hover {
+    color: var(--cor-setima);
+    background-color: var(--cor-sexta);
+    padding: 0.2rem;
+    border-radius: 5px;
+    font-size: 2vh;
+}
+
+/* Seção Home */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5rem 10rem 0rem;
+}
+
+.container2 {
+    display: flex;
+    justify-content: end;
+    font-size: 1rem;
+    padding: 0rem 2rem 15rem 0rem;
+    color: var(--cor-oitava);
+}
+
+#home h1 {
+    font-size: 7.5vw;
+    margin-bottom: 1rem;
+    color: var(--cor-secundaria);
+}
+
+#home img {
+    max-width: 350px;
+}
+
+/* Cards de comissão */
+#artes {
+    padding: 1rem 0;
+}
+
+#artes h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--cor-oitava);
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-quinta);
+    margin: 3rem 0;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.card img {
+    object-fit: cover;
+    width: 550px;
+    height: 550px;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--cor-secundaria);
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-quaternaria);
+    color: var(--cor-secundaria);
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+    border-top: 3px solid var(--cor-terciaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h2 {
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--cor-oitava);
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    transition: 0.3s all;
+}
+footer img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
