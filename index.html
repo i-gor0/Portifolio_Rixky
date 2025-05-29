@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comissão</title>
+    <title>Comissions by Rixky</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <link rel="shortcut icon" href="Assets/icon-rick.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
         <header>
         <nav>
-            <ul>
+            <ul data-aos="fade-down" data-aos-delay="200">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#artes">Artes</a></li>
                 <li><a href="#contact">Contato</a></li>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" id="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
             </ul>
         </nav>
     </header>
@@ -22,38 +29,39 @@
         <section id="home">
             <div class="container">
                 <div>
-                    <h1>Rixky.Art</h1>
-                    <h2>Commisions</h2>
+                    <h1 data-aos="fade-right" data-aos-delay="200"
+                    data-aos-anchor>Rixky.Art</h1>
+                    <h2 data-aos="fade-right" data-aos-delay="400">Commisions</h2>
                 </div>
-                <img src="Assets/placeholder.png" alt="Your OC">
+                <img data-aos="fade-up-left"  src="Assets/placeholder.png" alt="Your OC">
             </div>
             <div class="container2">
-                <h2>~Comissões Abertas~</h2>
+                <h2 data-aos="fade-up-right">~Comissões Abertas~</h2>
             </div>
         </section>
         <section id="artes">
-            <div class="card">
-                <img src="Assets/img_busto.webp" alt="first-art">
+            <div data-aos="flip-up" class="card">
+                <img data-aos="fade-in" data-aos-delay="500" src="Assets/img_busto.webp" alt="first-art">
                 <div class="card-content">
-                    <h2>Busto</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque culpa dolorum neque distinctio saepe temporibus esse exercitationem repellat nihil vitae atque illum beatae, quo ducimus perspiciatis architecto, a deserunt. Exercitationem.</p>
+                    <h2 data-aos="zoom-in">Busto</h2>
+                    <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque culpa dolorum neque distinctio saepe temporibus esse exercitationem repellat nihil vitae atque illum beatae, quo ducimus perspiciatis architecto, a deserunt. Exercitationem.</p>
                 </div>
 
             </div>
-            <div class="card">
+            <div class="card" data-aos="flip-up">
                 <img src="Assets/img_full.webp" alt="second-art">
                 <p>Comissão de corpo inteiro. preço: </p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="flip-up">
                 <img src="Assets/img_group.webp" alt="third-art">
                 <p>Comissão de grupo. preço: </p>
             </div>
-            <div class="card">
+            <div class="card" data-aos="flip-up">
                 <img src="Assets/img_icone.webp" alt="fourth-art">
                 <p>Comissão de ícone. preço: </p>
             </div>
         </section>
-        <footer>
+        <footer data-aos="fade-down">
             <section id="contact">
             <h2>Contato</h2>
             <p>Para entrar em contato, envie um e-mail para: <a href="https://mail.google.com/mail/?view=cm&to=ricky.art080@gmail.com" target="_blank">ricky.art080@gmail.com</a></p>
@@ -67,5 +75,9 @@
         </section>
         </footer>
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

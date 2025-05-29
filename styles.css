@@ -30,6 +30,19 @@
   --cor-nona: #212226; /* Graphite – fundo alternativo */
   --cor-decima: #ff4e4e; /* Red Neon – sombras/sutilezas */
 }
+.light-mode {
+  --cor-primaria: #edd7b2;
+  --cor-secundaria: #470f0f;
+  --cor-terciaria: #000000;
+  --cor-quaternaria: #ff6868;
+  --cor-quinta: #fff7ef;
+  --cor-sexta: #e0e0e0;
+  --cor-setima: #ff6b6b;
+  --cor-oitava: #7c0808;
+  --cor-nona: #f5f5f5;
+  --cor-decima: #ff4e4e;
+  background-image: none;
+}
 
 body {
   font-family: "bestime", sans-serif;
@@ -45,7 +58,6 @@ body {
     #121212 20px
   );
 }
-
 /* Header fixo, centralizado e dark */
 header {
   background-color: var(--cor-quaternaria);
@@ -64,6 +76,9 @@ header {
 /* Navegação */
 nav ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   list-style: none;
   gap: 2rem;
 }
@@ -74,6 +89,57 @@ nav a {
   font-weight: bold;
   transition: all 0.2s ease;
   font-size: 2vh;
+}
+.theme-switch-wrapper {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 999;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #5f0000;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: rgb(245, 216, 216);
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #f79089;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
 }
 main {
   padding: 20dvh;
